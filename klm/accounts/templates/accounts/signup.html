@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+ {% load crispy_forms_tags %}
+ {% load static %}           <!-- important to add -->
+{% block content %}
+
+{% if error %}
+<div class="alert alert-danger" role="alert">
+{{ error }}
+</div>
+{% endif %}
+
+<div class="container signup-container">
+  <div class="row">
+  <div class="col-md-4">
+    <img src="{% static 'team.png' %}" width = "300" class="img-fluid">
+  </div>
+   <div class="col-md-8">
+    <div class = "container">
+      <h1>Sign Up</h1>
+   <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     {{ user_form|crispy }}
+     {{ details_form|crispy }}
+     <br>
+     <input type="submit" class="btn btn-outline-primary" value="Submit">
+   </form>
+   <br>
+   <p>Already have an account? Click here to <a href="{% url 'signin' %}">login</a></p>
+   </div>
+   </div>
+ </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+.login-container{
+    width: 120rem;
+    margin-top: 10rem;
+  }
+  
+  .signup-container{
+    width: 120rem;
+    margin-top: 5rem;
+  }
+  
+  .footer-container{
+    height: 10rem;
+    margin-top: 5rem;
+  }
+  
+  .feedback-container{
+    width: 120rem;
+    margin-top: 8rem;
+  }
+  
+  .book-container{
+    width: 120rem;
+    margin-top: 8rem;
+  }
+  
+  .profile-container{
+    margin-left: 15rem;
+    margin-top: 4rem;
+  }
+  
+  
+  .leave-container{
+    margin-top: 10rem;
+  }
+  
