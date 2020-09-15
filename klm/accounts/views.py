@@ -27,7 +27,9 @@ def signup(request):
             login(request,user)
             return redirect('home')
         else: 
-            return render(request,'accounts/signup.html',{'error': 'Something went wrong :)'})
+            user_form = UserForm()
+            details_form = DetailsForm()
+            return render(request,'accounts/signup.html',{'user_form':user_form,'details_form': details_form,'error': 'Username Taken'})
 
     else:
         user_form = UserForm()
